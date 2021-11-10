@@ -26,7 +26,7 @@ namespace Sample.Grpc
                     webBuilder =>
                     {
 #if !DEBUG
-                        webBuilder.UseKestrel(e => { e.ListenAnyIP(80, c => c.Protocols = HttpProtocols.Http2); })
+                        webBuilder.UseKestrel(e => { e.ListenAnyIP(80, c => c.Protocols = HttpProtocols.Http2); });
 #endif
                         webBuilder.UseStartup<Startup>();
                     }
